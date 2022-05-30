@@ -16,3 +16,13 @@ describe ('Haiku.isThreeLines', () => {
     expect(haiku.isThreeLines()).toEqual(true);
   });
 });
+describe ('Haiku.isHaiku', () => {
+  test('it should return true if the text is a haiku', () => {
+    let haiku = new Haiku("An ocean voyage\nAs waves break over the bow\nThe sea welcomes me.")
+    expect(haiku.isHaiku()).toEqual(true);
+  });
+  test('it should return false if the text is not a haiku', () => {
+    let haiku = new Haiku("An ocean voyage\nAs waves break over the bow\nThe sea me.\nhi ryan!");
+    expect(haiku.isHaiku()).toEqual(false);
+  });
+});
