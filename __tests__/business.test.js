@@ -26,3 +26,10 @@ describe ('Haiku.isHaiku', () => {
     expect(haiku.isHaiku()).toEqual(false);
   });
 });
+describe ('Haiku.generateHaiku', () => {
+  test('it should generate a random haiku', () => {
+    let haiku = new Haiku();
+    let testHaiku = new Haiku(haiku.generateHaiku());
+    expect(testHaiku.isHaiku()).toEqual(true);
+  })
+});
